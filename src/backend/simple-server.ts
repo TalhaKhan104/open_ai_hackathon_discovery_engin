@@ -9,11 +9,15 @@ const server = createServer(app);
 const wss = new WebSocketServer({ server });
 
 // Simple configuration
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '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';
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';
 const PORT = 3001;
 
 // Set the API key for OpenAI Agents SDK
-process.env.OPENAI_API_KEY = OPENAI_API_KEY;
+if (OPENAI_API_KEY) {
+  process.env.OPENAI_API_KEY = OPENAI_API_KEY;
+} else {
+  console.warn('⚠️  OPENAI_API_KEY not set! Please set your API key as an environment variable.');
+}
 
 // WebSocket connections
 const clients = new Set<WebSocket>();

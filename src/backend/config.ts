@@ -6,7 +6,7 @@
 export const config = {
   // OpenAI API Key - REQUIRED
   // Get from: https://platform.openai.com/api-keys
-  openaiApiKey: process.env.OPENAI_API_KEY || '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',
+  openaiApiKey: process.env.OPENAI_API_KEY || '',
   
   // Server Configuration
   port: process.env.PORT || 3001,

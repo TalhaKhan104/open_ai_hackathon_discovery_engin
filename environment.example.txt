@@ -1,0 +1,17 @@
+# Environment Variables Example
+# Copy this file to .env and add your actual API key
+
+# OpenAI API Key (required)
+# Get yours from: https://platform.openai.com/api-keys
+OPENAI_API_KEY=your-openai-api-key-here
+
+# Optional: Custom backend URL for frontend
+REACT_APP_BACKEND_URL=http://localhost:3001
+
+# Optional: Custom WebSocket URL for frontend
+REACT_APP_WEBSOCKET_URL=ws://localhost:3001
+
+# How to use:
+# 1. Copy this file: cp environment.example.txt .env
+# 2. Edit .env and replace "your-openai-api-key-here" with your actual API key
+# 3. Start the servers: npm run simple-dev 
