@@ -15,13 +15,35 @@
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@openai/agents": "^0.0.2",
+    "openai": "^4.73.1",
+    "express": "^4.21.2",
+    "@types/express": "^5.0.0",
+    "ws": "^8.18.0",
+    "@types/ws": "^8.5.13",
+    "cors": "^2.8.5",
+    "@types/cors": "^2.8.17",
+    "uuid": "^10.0.0",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "@types/cheerio": "^0.22.35",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "concurrently": "^9.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "backend": "ts-node -P src/backend/tsconfig.json src/backend/server.ts",
+    "simple-backend": "ts-node -P src/backend/tsconfig.json src/backend/simple-server.ts",
+    "dev": "concurrently \"npm run backend\" \"npm start\"",
+    "simple-dev": "concurrently \"npm run simple-backend\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
